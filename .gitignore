@@ -1,0 +1,14 @@
+# generated graphs and accounting data — never commit
+graphify-out/
+*.graph.json
+usage.jsonl
+.graphify_root
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.egg-info/

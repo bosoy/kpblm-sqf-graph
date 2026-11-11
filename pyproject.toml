@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kpblm-sqf-graph"
+version = "0.1.0"
+description = "SQF (Arma 3) knowledge-graph extractor for Graphify's MCP server, with a token-accounting proxy and tally."
+readme = "README.md"
+requires-python = ">=3.10,<3.15"
+license = { text = "MIT" }
+authors = [{ name = "KPblM" }]
+keywords = ["arma3", "sqf", "graphify", "mcp", "knowledge-graph"]
+dependencies = ["graphifyy[mcp]>=0.9.106"]
+
+[project.scripts]
+sqf-graph = "sqf_graph:main"
+graphify-tally = "tally:main"
+graphify-proxy = "proxy:main"
+
+[tool.setuptools]
+py-modules = ["sqf_graph", "proxy", "tally"]
